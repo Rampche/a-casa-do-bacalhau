@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/acasadobacalhau?createDatabaseIfNotExist=true
+    username: Greg
+    password: 8Ss9220137!
+jpa:
+  hibernate:
+    ddl-auto: update
+
