@@ -1,20 +1,21 @@
 package com.example.acasadobacalhau.models
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import com.example.acasadobacalhau.enums.CustomerStatus
+import jakarta.persistence.*
 
 @Entity(name = "customer")
 data class CustomerModel (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
     var id: Int? = null,
-    @Column
+    @Column(name= "name")
     var name: String,
-    @Column
+    @Column(name= "email")
     var email: String,
-    @Column
-    var password: String
+    @Column(name= "password")
+    var password: String,
+    @Column(name= "status")
+    @Enumerated(EnumType.STRING)
+    var status: CustomerStatus? = CustomerStatus.ACTIVE
 )

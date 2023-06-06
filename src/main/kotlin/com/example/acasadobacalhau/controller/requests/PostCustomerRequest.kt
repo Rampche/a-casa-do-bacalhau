@@ -1,4 +1,4 @@
-package com.example.acasadobacalhau.controllers.requests
+package com.example.acasadobacalhau.controller.requests
 
 data class PostCustomerRequest(
     val name: String,
