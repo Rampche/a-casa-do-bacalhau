@@ -21,6 +21,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-mail")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 	implementation("org.flywaydb:flyway-core")
 	implementation("org.flywaydb:flyway-mysql")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
