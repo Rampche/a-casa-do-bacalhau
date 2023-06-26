@@ -16,6 +16,7 @@ class CustomerService(val customerRepository: CustomerRepository) {
         customerRepository.save(customer)
     }
 
+    //Find all Actives
     fun findActives(): List<CustomerModel> {
         return customerRepository.findByStatus(CustomerStatus.ACTIVE)
     }
