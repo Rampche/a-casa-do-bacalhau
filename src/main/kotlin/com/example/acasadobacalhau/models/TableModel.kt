@@ -1,6 +1,5 @@
 package com.example.acasadobacalhau.models
 
-import com.example.acasadobacalhau.enums.CustomerStatus
 import com.example.acasadobacalhau.enums.TableStatus
 import jakarta.persistence.*
 
@@ -15,6 +14,6 @@ data class TableModel(
     @Column
     var capacity: Int,
     @Column
-@Enumerated(EnumType.STRING)
-var status: TableStatus = TableStatus.EMPTY,
+    @Enumerated(EnumType.STRING)
+    var status: TableStatus = TableStatus.EMPTY,
 )
