@@ -1,8 +1,7 @@
 package com.example.acasadobacalhau.controller
 
-import com.example.acasadobacalhau.controller.requests.PatchCustomerRequest
-import com.example.acasadobacalhau.controller.requests.PostCustomerRequest
-import com.example.acasadobacalhau.controller.requests.PutCustomerRequest
+import com.example.acasadobacalhau.controller.requests.customer.PostCustomerRequest
+import com.example.acasadobacalhau.controller.requests.customer.PutCustomerRequest
 import com.example.acasadobacalhau.extensions.toCustomerModel
 import com.example.acasadobacalhau.models.CustomerModel
 import com.example.acasadobacalhau.services.CustomerService
@@ -10,7 +9,6 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PatchMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
@@ -42,6 +40,7 @@ class CustomerController(val customerService: CustomerService) {
     fun findActives():List<CustomerModel>{
         return customerService.findActives()
     }
+
 
     @GetMapping("/{id}")
     fun findCustomerById(@PathVariable id:Int):CustomerModel{
