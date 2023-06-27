@@ -1,12 +1,9 @@
 package com.example.acasadobacalhau.services
 
-import com.example.acasadobacalhau.controller.requests.PatchCustomerRequest
-import com.example.acasadobacalhau.controller.requests.PutCustomerRequest
 import com.example.acasadobacalhau.enums.CustomerStatus
 import com.example.acasadobacalhau.models.CustomerModel
 import com.example.acasadobacalhau.repository.CustomerRepository
 import org.springframework.stereotype.Service
-import org.springframework.web.bind.annotation.RequestParam
 
 @Service
 class CustomerService(val customerRepository: CustomerRepository) {
