@@ -1,4 +1,4 @@
-package com.example.acasadobacalhau.controller.requests
+package com.example.acasadobacalhau.controller.requests.customer
 
 data class PutCustomerRequest(
     var name: String?,
