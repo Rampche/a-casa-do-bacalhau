@@ -33,21 +33,8 @@ class CustomerService(val customerRepository: CustomerRepository) {
 
     //Update customer
     fun updateCustomer(customer: CustomerModel) {
-//        val existingCustomer = customerRepository.findById(customer.id!!)
-//            .orElseThrow { throw Exception() }
         customerRepository.save(customer)
     }
-
-//    fun updateCustomer(customer: PutCustomerRequest) {
-//        val existingCustomer = customerRepository.findById(customer.id!!)
-//            .orElseThrow { throw Exception() }
-//
-//        customer.name?.let { existingCustomer.name = it }
-//        customer.email?.let { existingCustomer.email = it }
-//        customer.password?.let { existingCustomer.password = it }
-//
-//        customerRepository.save(existingCustomer)
-//    }
 
     //Delete Customer
     fun deleteCustomer(id: Int) {
