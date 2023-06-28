@@ -3,8 +3,8 @@ reservation_id int auto_increment primary key,
 reservation_date date,
 reservation_time time(0),
 party_size int,
-customerId int,
-tablesId int,
-FOREIGN KEY (tablesId) REFERENCES tables(tables_id),
-FOREIGN KEY (customerId) REFERENCES customer(customer_id)
+customer_id int,
+tables_id int,
+FOREIGN KEY (tables_id) REFERENCES tables(tables_id),
+FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
 );
