@@ -1,4 +1,4 @@
-package com.example.acasadobacalhau.services
+package com.example.acasadobacalhau.services.seeds
 
 
 import com.example.acasadobacalhau.models.ItemsModel
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 import java.math.BigDecimal
 
 @Service
-class ItemsService @Autowired constructor (
+class ItemsSeedService @Autowired constructor (
     private val itemRepository: ItemsRepository
 ){
     @PostConstruct

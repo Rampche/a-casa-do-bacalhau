@@ -1,4 +1,4 @@
-package com.example.acasadobacalhau.services
+package com.example.acasadobacalhau.services.seeds
 
 import com.example.acasadobacalhau.enums.TableStatus
 import com.example.acasadobacalhau.models.TableModel
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class TableService @Autowired constructor (
+class TableSeedService @Autowired constructor (
     private val tableRepository: TableRepository
 ){
     @PostConstruct
