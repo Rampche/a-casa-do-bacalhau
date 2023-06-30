@@ -1,11 +1,11 @@
 package com.example.acasadobacalhau.services
 
 import com.example.acasadobacalhau.models.ReservationModel
-import com.example.acasadobacalhau.repository.ReservationRespository
+import com.example.acasadobacalhau.repository.ReservationRepository
 import org.springframework.stereotype.Service
 
 @Service
-class ReservationService(val reservationRepository: ReservationRespository) {
+class ReservationService(val reservationRepository: ReservationRepository) {
 
     //Create a reservation
     fun createReservation(reservation: ReservationModel){

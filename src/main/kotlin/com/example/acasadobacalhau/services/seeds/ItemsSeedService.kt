@@ -4,12 +4,13 @@ package com.example.acasadobacalhau.services.seeds
 import com.example.acasadobacalhau.models.ItemsModel
 import com.example.acasadobacalhau.repository.ItemsRepository
 import jakarta.annotation.PostConstruct
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression
 import org.springframework.stereotype.Service
 import java.math.BigDecimal
 
 @Service
-class ItemsSeedService @Autowired constructor (
+@ConditionalOnExpression("\${seeding.enable:false}")
+class ItemsSeedService(
     private val itemRepository: ItemsRepository
 ){
     @PostConstruct

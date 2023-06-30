@@ -4,11 +4,12 @@ import com.example.acasadobacalhau.enums.TableStatus
 import com.example.acasadobacalhau.models.TableModel
 import com.example.acasadobacalhau.repository.TableRepository
 import jakarta.annotation.PostConstruct
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression
 import org.springframework.stereotype.Service
 
 @Service
-class TableSeedService @Autowired constructor (
+@ConditionalOnExpression("\${seeding.enable:false}")
+class TableSeedService(
     private val tableRepository: TableRepository
 ){
     @PostConstruct
