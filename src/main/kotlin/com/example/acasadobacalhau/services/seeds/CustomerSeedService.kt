@@ -1,14 +1,14 @@
 package com.example.acasadobacalhau.services.seeds
 
 import com.example.acasadobacalhau.enums.CustomerStatus
-import com.example.acasadobacalhau.enums.RoleType
 import com.example.acasadobacalhau.models.CustomerModel
 import com.example.acasadobacalhau.repository.CustomerRepository
 import jakarta.annotation.PostConstruct
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression
 import org.springframework.stereotype.Service
 @Service
-class CustomerSeedService@Autowired constructor(
+@ConditionalOnExpression("\${seeding.enable:false}")
+class CustomerSeedService(
     private val customerRepository: CustomerRepository
 ) {
     @PostConstruct

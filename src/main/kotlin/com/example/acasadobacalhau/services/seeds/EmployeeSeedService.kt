@@ -4,11 +4,12 @@ import com.example.acasadobacalhau.enums.RoleType
 import com.example.acasadobacalhau.models.EmployeeModel
 import com.example.acasadobacalhau.repository.EmployeeRepository
 import jakarta.annotation.PostConstruct
-import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression
 import org.springframework.stereotype.Service
 
 @Service
-class EmployeeSeedService @Autowired constructor(
+@ConditionalOnExpression("\${seeding.enable:false}")
+class EmployeeSeedService(
     private val employeeRepository: EmployeeRepository
 ){
     @PostConstruct
