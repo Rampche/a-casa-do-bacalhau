@@ -20,7 +20,4 @@ data class CustomerModel (
     @Column(name= "status")
     @Enumerated(EnumType.STRING)
     var status: CustomerStatus? = CustomerStatus.ACTIVE,
-    @ManyToOne
-    @JoinColumn(name="reservation_id")
-    var reservation: ReservationModel? = null,
 )
