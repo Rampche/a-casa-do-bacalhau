@@ -7,6 +7,7 @@ import java.time.LocalDate
 import java.time.LocalTime
 
 data class PostReservationRequest (
+    val id: Int?,
     val date: LocalDate,
     val time: LocalTime,
     val partySize: Int,
