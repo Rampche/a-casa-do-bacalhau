@@ -30,7 +30,7 @@ class OrderController(val orderService: OrderService, val reservationService: Re
         val reservation = reservationService.findReservationById(order.reservation)
         orderService.createOrder(order.toOrderModel(employee, customer, reservation))
     }
-//REVER ESSA PARTE
+//REVER ESSA PARTE. VER COMO FUNCIONOU COM A RESERVATION
     @GetMapping
     fun findOrders(): List<OrderModel>{
         return orderService.findOrders()

@@ -11,4 +11,5 @@ interface EmployeeRepository:CrudRepository<EmployeeModel, Int> {
     fun findByNameContaining(name: String): List<EmployeeModel>
     fun findByRole(type: RoleType): List<EmployeeModel>
     fun findByStatus(status: EmployeeStatus): List<EmployeeModel>
+    fun existsByStatus(status: EmployeeStatus):Boolean
 }

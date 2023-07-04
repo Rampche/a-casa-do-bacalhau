@@ -3,9 +3,12 @@ package com.example.acasadobacalhau.controller
 import com.example.acasadobacalhau.controller.requests.customer.PostCustomerRequest
 import com.example.acasadobacalhau.controller.requests.customer.PutCustomerRequest
 import com.example.acasadobacalhau.controller.requests.reservation.PostReservationRequest
+import com.example.acasadobacalhau.controller.requests.reservation.PutReservationRequest
 import com.example.acasadobacalhau.extensions.toCustomerModel
 import com.example.acasadobacalhau.extensions.toReservationModel
 import com.example.acasadobacalhau.models.CustomerModel
+import com.example.acasadobacalhau.models.ReservationModel
+import com.example.acasadobacalhau.repository.ReservationRepository
 import com.example.acasadobacalhau.services.CustomerService
 import com.example.acasadobacalhau.services.ReservationService
 import org.springframework.http.HttpStatus
@@ -26,7 +29,10 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @CrossOrigin(origins = ["http://localhost:3000"])
 @RequestMapping("customers")
-class CustomerController(val customerService: CustomerService) {
+class CustomerController(
+    val customerService: CustomerService,
+    val reservationService: ReservationService
+    ) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
