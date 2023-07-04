@@ -15,5 +15,5 @@ data class TableModel(
     var capacity: Int,
     @Column
     @Enumerated(EnumType.STRING)
-    var status: TableStatus = TableStatus.EMPTY,
+    var status: TableStatus? = TableStatus.EMPTY,
 )
